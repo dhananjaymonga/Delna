@@ -1,0 +1,7 @@
+[
+    { "id": 1, "name": "LED Bulb", "category": "Lights", "image": "/images/led-bulb.jpg" },
+    { "id": 2, "name": "Flood Light", "category": "Lights", "image": "/images/flood-light.jpg" },
+    { "id": 3, "name": "Copper Wire", "category": "Wires", "image": "/images/copper-wire.jpg" },
+    { "id": 4, "name": "Water Pump", "category": "Pumps", "image": "/images/water-pump.jpg" },
+    { "id": 5, "name": "Ceiling Fan", "category": "Fans", "image": "/images/ceiling-fan.jpg" }
+  ]

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { motion } from "framer-motion";
-// import { useState } from "react";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +20,13 @@ const Navbar = () => {
         
         {/* Menu */}
         <div className="hidden md:flex gap-6 text-lg">
-          <a href="#" className="hover:text-blue-500">Home</a>
-          <a href="#" className="hover:text-blue-500">About</a>
-          <a href="#" className="hover:text-blue-500">Services</a>
-          <a href="#" className="hover:text-blue-500">Contact</a>
+          {/* <a href="#" className="hover:text-blue-500">Home</a> */}
+          <NavLink to={"/"} className="hover:text-blue-500">Home</NavLink>
+          <NavLink to={"/About"} className="hover:text-blue-500">About</NavLink>
+          <NavLink to={"/Contact"} className="hover:text-blue-500">Contact</NavLink>
+          <NavLink to={"/Product"} className="hover:text-blue-500">Product</NavLink>
+          {/* <a href="#" className="hover:text-blue-500">Services</a>
+          <a href="#" className="hover:text-blue-500">Contact</a> */}
         </div>
         
         {/* Mobile Menu Button */}

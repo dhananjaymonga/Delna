@@ -1,0 +1,25 @@
+{
+    "headOffice": {
+      "address": "123 Main Street, City, Country",
+      "phone": "+1234567890",
+      "email": "info@company.com"
+    },
+    "branchOffices": [
+      {
+        "city": "New York",
+        "address": "456 Elm St, New York, USA",
+        "phone": "+1123456789"
+      },
+      {
+        "city": "Los Angeles",
+        "address": "789 Pine Ave, Los Angeles, USA",
+        "phone": "+1987654321"
+      }
+    ],
+    "support": {
+      "email": "support@company.com",
+      "phone": "+1234009876"
+    },
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=YOUR_MAP_LINK_HERE"
+  }
+  
