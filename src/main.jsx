@@ -8,7 +8,9 @@ import './index.css'
 import App from './App.jsx'
 import About from "./Component/About.jsx"
 import Contact from "./Component/Contact.jsx"
-import Product from './Component/Product.jsx';
+import CableCalutor from "./Component/CableCalutor"
+import {Product} from './Component/Product.jsx';
+import FAQPage from './Component/FAQ-Page';
 
 const router= createBrowserRouter([
   {
@@ -23,12 +25,16 @@ const router= createBrowserRouter([
     path:"/Contact", 
     element:<Contact/>
   },
-  // {
-  //   path:"/Contact", 
-  //   element:<Contact/>
-  // },
   {
-    path:"/Product", 
+    path:"/CableCalutor", 
+    element:<CableCalutor/>
+  },
+  {
+    path:"/Faq-Page", 
+    element:<FAQPage/>
+  },
+  {
+    path:"/products/:category", 
     element:<Product/>
   },
 ])

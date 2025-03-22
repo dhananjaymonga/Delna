@@ -4,11 +4,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   { id: 1, title: "Our Legacy", description: "Committed to quality and innovation for over 30 years.", image: "/image/wires.webp" },
- 
   { id: 2, title: "Our Vision", description: "Striving to be a global leader in wire and cable solutions.", image: "/image/pipe.webp" },
   { id: 1, title: "Our Legacy", description: "Committed to quality and innovation for over 30 years.", image: "/image/wires.webp" },
-
   { id: 2, title: "Our Vision", description: "Striving to be a global leader in wire and cable solutions.", image: "/image/pipe.webp" },
+  { id: 1, title: "Our Legacy", description: "Committed to quality and innovation for over 30 years.", image: "/image/wires.webp" },
 ];
 
 export default function Carousel() {
@@ -38,25 +37,33 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="relative w-full mx-auto overflow-hidden  shadow-lg ">
-      {/* Slide Images (Full Screen Width with Space on Sides) */}
-<h2 className="align-center text-center  text-4xl mb-3">Our Company
+    <div className="relative w-full mx-auto overflow-hidden shadow-lg">
+      {/* Title */}
+      {/* <h2 className="text-center text-4xl mb-3">Our Company</h2> */}
 
-</h2>
-      <div className="relative w-full flex items-center justify-center h-[65vh] px-4 md:px-16">
+      {/* Slide Images */}
+      <div className="relative w-full flex items-center justify-center h-[65vh] ">
         {slides.map((slide, index) => (
           <motion.div
             key={slide.id}
-            className="absolute w-full h-full flex flex-col items-center justify-center text-center bg-cover bg-center text-white p-6 "
+            className={`absolute w-full h-full flex flex-col items-center justify-center text-center bg-cover bg-center text-white p-6 ${
+              index === currentIndex ? "block" : "hidden"
+            }`}
             style={{
               backgroundImage: `url(${slide.image})`,
-              display: index === currentIndex ? "flex" : "none",
-              width: "100%",
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentIndex ? 1 : 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Lazy Loaded Image */}
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="absolute w-full h-full object-cover opacity-0"
+              loading="lazy"
+              onLoad={(e) => e.target.classList.remove("opacity-0")}
+            />
             <h2 className="text-3xl md:text-5xl font-bold mb-2">{slide.title}</h2>
             <p className="text-lg md:text-xl">{slide.description}</p>
           </motion.div>
@@ -78,7 +85,7 @@ export default function Carousel() {
         <ChevronRight size={32} />
       </button>
 
-      {/* Xiaomi-Style Progress Bar (Only Active One Fills) */}
+      {/* Progress Bar */}
       <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2">
         {slides.map((_, index) => (
           <div key={index} className="h-1 w-16 rounded-full bg-gray-300 overflow-hidden">
@@ -91,6 +98,5 @@ export default function Carousel() {
         ))}
       </div>
     </div>
-    
   );
 }

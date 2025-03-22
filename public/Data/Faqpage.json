@@ -1,0 +1,42 @@
+[
+    {
+      "category": "Electrical Wires",
+      "items": [
+        {
+          "question": "What types of electrical wires does Delna Electricals offer?",
+          "answer": "We offer household wiring, industrial wiring, flexible wires, flame-retardant (FR), and zero halogen flame-retardant (ZHFR) wires."
+        },
+        {
+          "question": "Are your electrical wires safe for home and industrial use?",
+          "answer": "Yes, our wires meet the highest safety standards, ensuring high conductivity, heat resistance, and durability."
+        }
+      ]
+    },
+    {
+      "category": "Electrical Conduit Pipes",
+      "items": [
+        {
+          "question": "What types of electrical conduit pipes do you offer?",
+          "answer": "We provide PVC conduit pipes, rigid conduit pipes, and flexible conduit pipes for various installations."
+        },
+        {
+          "question": "Can your conduit pipes be used for underground wiring?",
+          "answer": "Yes, our rigid and heavy-duty conduit pipes offer excellent moisture and impact resistance."
+        }
+      ]
+    },
+    {
+      "category": "Lighting Solutions",
+      "items": [
+        {
+          "question": "What types of lighting solutions does Delna Electricals offer?",
+          "answer": "We provide LED bulbs, panel lights, floodlights, and street lights designed for energy efficiency."
+        },
+        {
+          "question": "Are LED lights better than traditional bulbs?",
+          "answer": "Yes, LED lights consume up to 80% less energy and have a longer lifespan."
+        }
+      ]
+    }
+  ]
+  

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-export default function ProductCatalog() {
+import { useParams, useNavigate } from "react-router-dom"; 
+
+export function Product() {
+  const { category: paramCategory } = useParams();
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState(paramCategory || "All");
 
   useEffect(() => {
     fetch("/Data/Product.json")
@@ -11,17 +13,19 @@ export default function ProductCatalog() {
       .then((data) => setProducts(data));
   }, []);
 
+  useEffect(() => {
+    setCategory(paramCategory || "All");
+  }, [paramCategory]);
+
   const filteredProducts = products.filter(
     (product) =>
-      (category === "All" || product.category === category) &&
+      (category === "All" || product.category.toLowerCase() === category.toLowerCase()) &&
       product.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
-    <>
-    <Navbar/>
     <div className="max-w-6xl mx-auto p-4">
-      {/* Search Bar */}
+      <h2 className="text-2xl font-bold mb-4">Category: {category}</h2>
       <input
         type="text"
         placeholder="Search products..."
@@ -29,8 +33,6 @@ export default function ProductCatalog() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      
-      {/* Category Buttons */}
       <div className="flex gap-2 mb-4">
         {["All", "Lights", "Wires", "Pumps", "Fans"].map((cat) => (
           <button
@@ -42,8 +44,6 @@ export default function ProductCatalog() {
           </button>
         ))}
       </div>
-      
-      {/* Product Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filteredProducts.map((product) => (
           <div key={product.id} className="border p-4 rounded shadow">
@@ -54,6 +54,5 @@ export default function ProductCatalog() {
         ))}
       </div>
     </div>
-    </>
   );
 }

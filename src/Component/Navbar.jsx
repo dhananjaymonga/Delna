@@ -24,7 +24,8 @@ const Navbar = () => {
           <NavLink to={"/"} className="hover:text-blue-500">Home</NavLink>
           <NavLink to={"/About"} className="hover:text-blue-500">About</NavLink>
           <NavLink to={"/Contact"} className="hover:text-blue-500">Contact</NavLink>
-          <NavLink to={"/Product"} className="hover:text-blue-500">Product</NavLink>
+          <NavLink to={"/products/lights"} className="hover:text-blue-500">Product</NavLink>
+          <NavLink to={"/Faq-Page"} className="hover:text-blue-500">FAQPage</NavLink>
           {/* <a href="#" className="hover:text-blue-500">Services</a>
           <a href="#" className="hover:text-blue-500">Contact</a> */}
         </div>
@@ -42,10 +43,11 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden flex flex-col items-center bg-white shadow-md py-4 gap-3"
         >
-          <a href="#" className="hover:text-blue-500">Home</a>
-          <a href="#" className="hover:text-blue-500">About</a>
-          <a href="#" className="hover:text-blue-500">Services</a>
-          <a href="#" className="hover:text-blue-500">Contact</a>
+         <NavLink to={"/"} className="hover:text-blue-500">Home</NavLink>
+          <NavLink to={"/About"} className="hover:text-blue-500">About</NavLink>
+          <NavLink to={"/Contact"} className="hover:text-blue-500">Contact</NavLink>
+          <NavLink to={"/products/lights"} className="hover:text-blue-500">Product</NavLink>
+          <NavLink to={"/Faq-Page"} className="hover:text-blue-500">FAQPage</NavLink>
         </motion.div>
       )}
     </>

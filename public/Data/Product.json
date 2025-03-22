@@ -1,7 +1,7 @@
 [
-    { "id": 1, "name": "LED Bulb", "category": "Lights", "image": "/images/led-bulb.jpg" },
-    { "id": 2, "name": "Flood Light", "category": "Lights", "image": "/images/flood-light.jpg" },
-    { "id": 3, "name": "Copper Wire", "category": "Wires", "image": "/images/copper-wire.jpg" },
-    { "id": 4, "name": "Water Pump", "category": "Pumps", "image": "/images/water-pump.jpg" },
-    { "id": 5, "name": "Ceiling Fan", "category": "Fans", "image": "/images/ceiling-fan.jpg" }
+    { "id": 1, "name": "LEDBulb", "category": "Lights", "image": "/images/led-bulb.jpg" },
+    { "id": 2, "name": "FloodLight", "category": "Lights", "image": "/images/flood-light.jpg" },
+    { "id": 3, "name": "CopperWire", "category": "Wires", "image": "/images/copper-wire.jpg" },
+    { "id": 4, "name": "WaterPump", "category": "Pumps", "image": "/images/water-pump.jpg" },
+    { "id": 5, "name": "CeilingFan", "category": "Fans", "image": "/images/ceiling-fan.jpg" }
   ]
